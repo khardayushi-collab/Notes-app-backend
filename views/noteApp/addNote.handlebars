@@ -1,0 +1,28 @@
+<div id="form">
+    <form action="/api/addNote" method="POST">
+        <fieldset>
+           <h2>Add Note</h2>
+           <div class="form_field">
+              <input name="noteId" placeholder="Note Id" required>
+           </div>
+
+           <div class="form_field">
+              <input name="noteName" placeholder="Note Name" required>
+           </div>
+
+           <div class="form_field">
+              <input name="description" placeholder="Description" required>
+           </div>
+
+            <div class="form_field">
+                <select name="status" >
+                    <option value="active"> Active</option>
+                    <option value="inactive"> Inactive</option>
+                </select>
+           </div>
+
+           <button>Add Note</button>
+
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="form-container">
+         <form action="/api/edit/{{payload._id}}" method="POST" class="form-card">
+         <h2>Edit Notes</h2>
+<div class="form-group">
+          <label>Note Id</label>
+          <input type="text" name="noteId" value="{{payload.noteId}}" required>
+</div>
+
+<div class="form-group">
+          <label>Note Name</label>
+          <input type="text" name="noteName" value="{{payload.noteName}}" required>
+</div>
+
+<div class="form-group">
+          <label>Description</label>
+          <input type="text" name="description" value="{{payload.description}}" required>
+</div>
+
+<div class="form-group">
+          <label>Status</label>
+          <select name="status">
+               <option value="active" {{#if (eq payload.status "active")}} selected {{/if}}>Active</option>
+               <option value="inactive" {{#if (eq payload.status "inactive")}} selected{{/if}}>Inactive</option>
+          </select>
+</div>
+<button type="submit" class="btn-primary">Update Note</button>
+</form>
+</div>

@@ -1,0 +1,17 @@
+<div class="single-container">
+    <div class="note-card single-card">
+        <h2>{{payload.noteName}}</h2>
+        <p class="note-desc">
+            {{payload.description}}
+        </p>
+        <span class="status" {{payload.status}}>
+            {{payload.status}}
+        </span>
+
+        <div class="single-action">
+            <a href="/api/edit/{{payload._id}}" class="btn edit">EDIT</a>
+            <a href="/api/delete/{{payload._id}}" class="btn delete">DELETE</a>
+            <a href="/api/allNotes" class="btn view">BACK</a>
+        </div>
+    </div>
+</div>
